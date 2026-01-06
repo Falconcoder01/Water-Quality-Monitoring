@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: wqm
+      MYSQL_USER: example_user
+      MYSQL_PASSWORD: password123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - Quality-Monitoring
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8081:8081"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/wqm
+      DB_USERNAME: example_user
+      DB_PASSWORD: password123
+    networks:
+      - Quality-Monitoring
+
+  frontend:
+    build: .
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - Quality-Monitoring
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  Quality-Monitoring:
+    driver: bridge
+
