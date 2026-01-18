@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: falconcoder01/monitoring-app-backend:latest
+          image: falconcoder01/monitoring-app-backend:
           ports:
             - containerPort: 8081
           env:
