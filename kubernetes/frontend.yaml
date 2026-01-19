@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: falconcoder01/monitoring-app-frontend:
+          image: falconcoder01/monitoring-app-frontend:v2
           ports:
             - containerPort: 8080
 
