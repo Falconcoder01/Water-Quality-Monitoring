@@ -32,7 +32,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script{
-                    code_checkout("https://github.com/Falconcoder01/Wanderlust-Mega-Project.git","master")
+                    code_checkout("https://github.com/Falconcoder01/Water-Quality-Monitoring.git","master")
                 }
             }
         }
@@ -70,15 +70,13 @@ pipeline {
         }
         
         stage('Exporting environment variables') {
-                stage("env setup"){
                     steps {
                         script{
-                            dir("Automations"){
+                            dir("automations"){
                                 sh "bash updatenew.sh"
                             }
                         }
                     }
-                }
         }
         
         stage("Docker: Build Images"){
@@ -88,9 +86,7 @@ pipeline {
                             docker_build("monitoring-app-backend","${params.BACKEND_DOCKER_TAG}","falconcoder01")
                         }
                     
-                        dir('frontend'){
-                            docker_build("monitoring-app-frontend","${params.FRONTEND_DOCKER_TAG}","falconcoder01")
-                        }
+                        docker_build("monitoring-app-frontend","${params.FRONTEND_DOCKER_TAG}","falconcoder01")
                 }
             }
         }
