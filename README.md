@@ -1,37 +1,21 @@
 # Water Quality Monitoring (WQM)
 
-## Problem Statement
-This project aims to develop a Complaint Management System to streamline the process of handling citizen grievances for a city administration. Through a userfriendly web application interface, citizens can submit complaints regarding issues such as water leakage and contamination.
+## 🌊 Water Quality Monitoring – DevSecOps & GitOps Project
+A DevSecOps-enabled, GitOps-driven Water Quality Monitoring application demonstrating a complete CI/CD pipeline using Jenkins, Docker, Kubernetes, Argo CD, and security scanning tools.
+
+This project was forked and enhanced to focus on real-world DevOps, DevSecOps, and GitOps practices suitable for production-grade deployments.
 
 ## Objectives
 - To develop a platform for reporting water quality complaints.
 - To implement a system to manage and visualize submissions.
 
-## SDG 6 Alignment
+#
+### <mark>Project Deployment Flow:</mark>
+<img src="public/DevSecOps+GitOps.gif" />
 
-The WQM platform supports Sustainable Development Goal 6 (SDG 6) by providing tools and resources to improve water quality and promote sustainable water monitoring practices. Through our complaint management system, we address water quality issues promptly, contributing to the goal of ensuring availability and sustainable management of water and sanitation for all.
+#
 
-### SDG Goal 6:
-
-![SDG 6](https://github.com/Cap26803/Water-Quality-Monitoring/assets/106472393/532d36d6-e216-4515-bd12-5fa18fcb29fe)
-
-### Ensure availability and sustainable management of water and sanitation for all.
-- **Target 6.1:** By 2030, achieve universal and equitable access to safe and affordable drinking water for all.
-- **Indicator 6.1.1:** Proportion of population using safely managed drinking water services.
-
-## System Thinking
-
-We applied systems thinking to analyze the intricate interactions involved in water quality monitoring. Breaking down the problem into smaller components enabled us to pinpoint crucial areas where intervention and enhancement were needed.
-
-### Causal Map
-![Causal Map](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/e5f1effa-380c-4cf7-a807-807c8b146a3c)
-
-### Behaviour Over Time (BoT)
-![Behaviour Over Time](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/c91e77ab-b31e-4870-943e-bb53ef092753)
-
-### Feedback Loops
-![Feedback Loop 1](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/d294e465-0678-4b65-8937-41e76b930d11)
-![Feedback Loop 2](https://github.com/Cap26803/Water-Quality-Monitoring/assets/105357505/5f5c27a0-337f-49f3-9b46-0fa20e7765b7)
+---
 
 ## Implementation Details
 
@@ -74,32 +58,44 @@ We applied systems thinking to analyze the intricate interactions involved in wa
 - **Spring Web:** Provides features to build web applications, including RESTful applications using Spring MVC.
 - **MySQL Connector/JDBC:** A driver that enables Java applications to communicate with MySQL databases.
 
+---
+
+### 📌 Project Highlights
+
+- 🔁 CI/CD using Jenkins
+- 🔐 DevSecOps integration (OWASP, SonarQube, Trivy)
+- 🐳 Containerized with Docker
+- ☸️ Deployed on Kubernetes
+- 🚀 GitOps deployment using Argo CD
+- 📊 Monitoring with Prometheus & Grafana
+- 📧 Email notifications for pipeline status
+
+---
+
+### How pipeline will look after deployment:
+- <b>CI pipeline to build and push</b>
+<img src="public/Screenshot 2026-01-19 070146.png" />
+
+- <b>CD pipeline to update application version</b>
+<img src="public/Screenshot 2026-01-19 071415.png" />
+
+- <b>ArgoCD application for deployment on EKS</b>
+<img src="public/Screenshot 2026-01-19 044653.png" />
+
+## Sonarqube
+<img src="public/Screenshot 2026-01-19 065242.png" />
+
+## Dashboard in Grafana
+<img src="public/Screenshot 2026-01-19 063733.png" />
+<img src="public/Screenshot 2026-01-19 065006.png" />
+<img src="public/Screenshot 2026-01-19 065127.png" />
+
+## Email Notification after Deployment
+<img src="public/Screenshot 2026-01-19 071257.png" />
+
 ## Final Outcomes:
 ![Home Page](https://github.com/Cap26803/Water-Quality-Monitoring/assets/106472393/6e0dae06-e3c9-4064-a6dd-f67f1a902004)
 ![Complaint Submission](https://github.com/Cap26803/Water-Quality-Monitoring/assets/106472393/649147a5-e65c-48b6-b8e3-684ffafc8113)
 ![Admin Dashboard](https://github.com/Cap26803/Water-Quality-Monitoring/assets/106472393/3f036abf-6c88-4eae-8b10-7c5eb5c8c8f6)
 
 
-## Contribution Guidelines
-
-We welcome contributions from the community. If you have suggestions or bug reports, please create an issue or submit a pull request.
-
-### Steps to Contribute
-
-1\. Fork the repository
-
-2\. Create a new branch (`git checkout -b feature-branch`)
-
-3\. Make your changes
-
-4\. Commit your changes (`git commit -m 'Add some feature'`)
-
-5\. Push to the branch (`git push origin feature-branch`)
-
-6\. Open a pull request
-
-Thank you for supporting the Water Quality Monitoring platform and our mission to promote clean water and sustainable development!
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
